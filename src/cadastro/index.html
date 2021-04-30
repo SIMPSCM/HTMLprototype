@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Início</title>
+  <title>Sign Up</title>
 </head>
 
 <body class="container py-5">
@@ -38,12 +38,11 @@
     </div>
   </header>
 
-
   <main class="pt-5">
     <div class="row" style="height: 70vh;">
-      <div class="col-6 form-login">
+      <div class="col-6 form-signup">
         <div>
-          <h1 class="color-primary"> Login </h1>
+          <h1 class="color-primary"> Cadastro </h1>
         </div>
         <div class="py-3">
           <form>
@@ -53,21 +52,25 @@
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
+              <label for="name" class="form-label"> Nome: </label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Usuário">
+            </div>
+            <div class="mb-3">
               <label for="password" class="form-label"> Senha: </label>
               <input type="password" class="form-control" id="password">
             </div>
             <div class="d-grid gap-2">
-              <button type="button" class="btn btn-primary"> ENTRAR </button>
+              <button type="button" class="btn btn-primary"> CADASTRAR </button>
             </div>
           </form>
         </div>
         <div class="text-center">
-          <span class="color-secondary"> Não possui conta? </span>
-          <button type="button" class="btn btn-link"> Cadastre-se </button>
+          <span class="color-secondary"> Já possui conta? </span>
+          <button type="button" class="btn btn-link"> Entrar </button>
         </div>
       </div>
       <div class="col-6 d-flex align-items-end">
-        <img src="../assets/code-thinking.svg" alt="" style="width: 100%;">
+        <img src="../assets/coding.svg" alt="" style="width: 100%;">
       </div>
     </div>
   </main>

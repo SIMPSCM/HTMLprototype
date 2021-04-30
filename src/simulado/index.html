@@ -5,14 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../global.css">
-  <link rel="stylesheet" href="../bootstrap-grid.css">
   <link rel="stylesheet" href="style.css">
   <title>Simulado - S10365489</title>
 </head>
 
 <body class="container py-5">
-  <div>
+  <header>
     <div class="row justify-content-between">
       <div class="col">
         <div class="col-auto">
@@ -35,13 +33,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <main class="container pt-5">
+  <main class="pt-5">
     <section class="question-enunciated">
       <p class="question-command">
         <span class="text-emphasis">Q232019</span>
-        <span> - </span> 
+        <span> - </span>
         Sobre árvores, é correto afirmar que:
       </p>
     </section>
@@ -62,7 +60,8 @@
       <div class="form-check">
         <input class="form-check-input" type="radio" name="alternative" id="alternative3">
         <label class="form-check-label" for="alternative3">
-          Uma árvore é balanceada se existe uma ordem linear definida para cada nodo, isto é, podemos identificar o filho de um nodo como sendo o primeiro, segundo e assim por diante.
+          Uma árvore é balanceada se existe uma ordem linear definida para cada nodo, isto é, podemos identificar o
+          filho de um nodo como sendo o primeiro, segundo e assim por diante.
         </label>
       </div>
       <div class="form-check">
@@ -80,13 +79,13 @@
     </section>
   </main>
 
-  <footer class="container py-5">
+  <footer class="pt-5">
     <div class="row justify-content-between">
       <div class="col-auto">
         <div class="col">
-        <a href="/">
-          <img src="../assets/logo.svg" alt="SIMPSCMP" />
-        </a>
+          <a href="/">
+            <img src="../assets/logo.svg" alt="SIMPSCMP" />
+          </a>
         </div>
         <div class="col">₢ SIMPSCMP - Todos os direito não sei de quem é.</div>
       </div>
@@ -121,7 +120,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <p class="modal-title text-huge">Resultado</p>
+          <h2 class="modal-title"> Resultado </h2>
           <button type="button" onclick="closeResultModal()" class="btn btn-primary-outlined color-white"> X </button>
         </div>
         <div class="modal-body">
@@ -130,7 +129,7 @@
               <img src="../assets/pie_chart.svg" alt="Resultado" />
             </div>
             <div class="py-3 col-auto d-flex justify-content-center">
-              <p class="text-huge" style="text-align: center;">Parabens! Que ótimo resultado, continue estudando.</p>
+              <h2 class="text-center">Parabens! Que ótimo resultado, continue estudando.</h2>
             </div>
           </div>
         </div>
@@ -152,7 +151,6 @@
     body.classList.add("modal-open")
     backdrop.style.display = "block";
     modal.style.display = "block";
-
   }
 
   function closeResultModal() {
@@ -165,41 +163,6 @@
     modal.style.display = "none";
   }
 
-
-  // // Get the body
-  // var body = document.getElementsByTagName("body")[0];
-
-  // // Get the modal
-  // var modal = document.getElementById("result-modal");
-  
-  // // Get the button that opens the modal
-  // var btn = document.getElementById("conclude-button");
-  
-  // // Get the <span> element that closes the modal
-  // var span = document.getElementsByClassName("close")[0];
-  
-  // // Get modal dialog
-  // var dialog = document.getElementsByClassName("modal-dialog")[0];
-
-  // // When the user clicks the button, open the modal 
-  // btn.onclick = function() {
-  //   body.classList.add("modal-open")
-  //   modal.style.display = "block";
-  // }
-  
-  // // When the user clicks on <span> (x), close the modal
-  // span.onclick = function() {
-  //   body.classList.remove("modal-open")
-  //   modal.style.display = "none";
-  // }
-  
-  // // When the user clicks anywhere outside of the modal, close it
-  // dialog.onclick = function(event) {
-  //   if (event.target == modal) {
-  //     body.classList.remove("modal-open")
-  //     modal.style.display = "none";
-  //   }
-  // }
-  </script>
+</script>
 
 </html>
