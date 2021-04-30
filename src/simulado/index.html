@@ -12,7 +12,7 @@
 </head>
 
 <body class="container py-5">
-  <header>
+  <div>
     <div class="row justify-content-between">
       <div class="col">
         <div class="col-auto">
@@ -30,12 +30,12 @@
             <button type="button" class="btn btn-transparent">DESISTIR</button>
           </div>
           <div class="col-auto">
-            <button type="button" class="btn btn-primary">CONCLUIR</button>
+            <button type="button" onclick="openResultModal()" class="btn btn-primary">CONCLUIR</button>
           </div>
         </div>
       </div>
     </div>
-  </header>
+  </div>
 
   <main class="container pt-5">
     <section class="question-enunciated">
@@ -117,6 +117,89 @@
     </div>
   </footer>
 
+  <div class="modal" id="result-modal" style="color: #FFF;">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title text-huge">Resultado</p>
+          <button type="button" onclick="closeResultModal()" class="btn btn-primary-outlined color-white"> X </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="col-auto d-flex justify-content-center">
+              <img src="../assets/pie_chart.svg" alt="Resultado" />
+            </div>
+            <div class="py-3 col-auto d-flex justify-content-center">
+              <p class="text-huge" style="text-align: center;">Parabens! Que ótimo resultado, continue estudando.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop"></div>
+
 </body>
+
+<script>
+
+  function openResultModal() {
+    // Pegando body, modal, backdrop
+    var body = document.getElementsByTagName("body")[0];
+    var modal = document.getElementById("result-modal");
+    var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+    body.classList.add("modal-open")
+    backdrop.style.display = "block";
+    modal.style.display = "block";
+
+  }
+
+  function closeResultModal() {
+    // Pegando body, modal, backdrop
+    var body = document.getElementsByTagName("body")[0];
+    var modal = document.getElementById("result-modal");
+    var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+    body.classList.remove("modal-open")
+    backdrop.style.display = "none";
+    modal.style.display = "none";
+  }
+
+
+  // // Get the body
+  // var body = document.getElementsByTagName("body")[0];
+
+  // // Get the modal
+  // var modal = document.getElementById("result-modal");
+  
+  // // Get the button that opens the modal
+  // var btn = document.getElementById("conclude-button");
+  
+  // // Get the <span> element that closes the modal
+  // var span = document.getElementsByClassName("close")[0];
+  
+  // // Get modal dialog
+  // var dialog = document.getElementsByClassName("modal-dialog")[0];
+
+  // // When the user clicks the button, open the modal 
+  // btn.onclick = function() {
+  //   body.classList.add("modal-open")
+  //   modal.style.display = "block";
+  // }
+  
+  // // When the user clicks on <span> (x), close the modal
+  // span.onclick = function() {
+  //   body.classList.remove("modal-open")
+  //   modal.style.display = "none";
+  // }
+  
+  // // When the user clicks anywhere outside of the modal, close it
+  // dialog.onclick = function(event) {
+  //   if (event.target == modal) {
+  //     body.classList.remove("modal-open")
+  //     modal.style.display = "none";
+  //   }
+  // }
+  </script>
 
 </html>
