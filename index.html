@@ -15,7 +15,7 @@
     <div class="row justify-content-between">
       <div class="col">
         <div class="col-auto">
-          <a href="/">
+          <a href="./index.html">
             <img src="./assets/logo.svg" alt="SIMPSCMP" />
           </a>
         </div>
@@ -47,97 +47,229 @@
         <h3> Seus Simulados: </h3>
       </div>
       <div class="col-auto">
-        <button type="button" class="btn btn-primary">Gerar simulado</button>
+        <button type="button" onclick="openSimulatedGeratorModal()" class="btn btn-primary">Gerar simulado</button>
       </div>
     </div>
 
     <div class="row pt-3 justify-content-between">
-      <div class="card col-2 d-flex align-items-center justify-content-center">
-        <a href="./simulado/index.html">
+      <a class="col-2" href="./simulado/index.html">
+        <div class="card d-flex align-items-center justify-content-center">
           <span class="text-bold color-white">S10365489</span>
-        </a>
+        </div>
+      </a>
+      <a class="col-2" href="./simulado/index.html">
+        <div class="card d-flex align-items-center justify-content-center">
+          <span class="text-bold color-white">S10365489</span>
+        </div>
+      </a>
+      <a class="col-2" href="./simulado/index.html">
+        <div class="card d-flex align-items-center justify-content-center">
+          <span class="text-bold color-white">S10365489</span>
+        </div>
+      </a>
+      <a class="col-2" href="./simulado/index.html">
+        <div class="card d-flex align-items-center justify-content-center">
+          <span class="text-bold color-white">S10365489</span>
+        </div>
+      </a>
+      <a class="col-2" href="./simulado/index.html">
+        <div class="card d-flex align-items-center justify-content-center">
+          <span class="text-bold color-white">S10365489</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="pt-5 row justify-content-between align-items-start">
+      <div class="col-auto">
+        <h3> Seu progresso: </h3>
       </div>
-      <div class="card col-2 d-flex align-items-center justify-content-center">
-        <span class="text-bold color-white">S00000000</span>
-      </div>
-      <div class="card col-2 d-flex align-items-center justify-content-center">
-        <span class="text-bold color-white">S00000000</span>
-      </div>
-      <div class="card col-2 d-flex align-items-center justify-content-center">
-        <span class="text-bold color-white">S00000000</span>
-      </div>
-      <div class="card col-2 d-flex align-items-center justify-content-center">
-        <span class="text-bold color-white">S00000000</span>
+      <div class="col-auto">
+        <button type="button" onclick="openRelatoryGeratorModal()" class="btn btn-primary">Gerar relatório</button>
       </div>
     </div>
 
-
-    <section class="your-progress">
-      <h3>Seu progresso</h3>
-
-      <div class="progress-chart">
-        <img src="./assets/chart.svg" alt="Seu progresso">
+    <div class="pt-3 row justify-content-between">
+      <div class="col-4">
+        <img src="./assets/chart.svg" alt="progresso" style="width: 100%;">
       </div>
-    </section>
+      <div class="col-7">
+        <div class="row justify-content-between">
+          <div class="col-7">
+            <img src="./assets/Area chart.svg" alt="progresso" style="width: 100%;">
+          </div>
+          <div class="col-4" style="height: 10rem; background-color: var(--gray-300);">
+            
+          </div>
+        </div>
+        <div class="pt-2 row justify-content-between">
+          <div class="col-4" style="height: 10rem; background-color: var(--gray-300);">
+            
+          </div>
+          <div class="col-7">
+            <img src="./assets/Group 60.svg" alt="progresso" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <div class="modal-overlay" style="display: none;">
-    <div class="modal">
-      <a class="close-modal">
-      </a>
-      <div class="modal-content">
-        <h3>Selecione a área</h3>
+  <div class="modal" id="simulated-gerator-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="color: var(--black); background-color: var(--gray-100);">
+        <div class="modal-header">
+          <h2 class="modal-title"> Gerador de Simulados </h2>
+          <button type="button" onclick="closeSimulatedGeratorModal()" class="btn btn-primary-outlined"> X </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pb-5">
+            <h4>Selecione a área:</h4>
 
-        <div class="areas">
-          <div class="math">
-            <img src="./assets//math.svg" alt="">
-            <p>Matemática</p>
-          </div>
+            <div class="pt-3 row justify-content-between">
+              <div class="col-3 select-area" style="border-color:#B2DF8A;">
+                <img src="./assets//math.svg" alt="" style="width: 100%;">
+              </div>
+              <div class="col-3 select-area" style="border-color: #1F78B4;">
+                <img src="./assets/fundaments.svg" alt="" style="width: 100%;">
+              </div>
+              <div class="col-3 select-area" style="border-color: #A6CEE3;">
+                <img src="./assets/technologies.svg" alt="" style="width: 100%;">
+              </div>
+            </div>
 
-          <div class="fundaments">
-            <img src="./assets/fundaments.svg" alt="">
-            <p>Fundamentos</p>
-          </div>
+            <h4>Selecione o ano:</h4>
 
-          <div class="technologies">
-            <img src="./assets/technologies.svg" alt="">
-            <p>Tecnologias</p>
+            <div class="pt-3 row g-3 justify-content-start">
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2019 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2018 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2017 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2016 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2015 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2014 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2013 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> 2012 </button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <h3>Selecione as edições</h3>
-
-        <div class="editions">
-
-          <div class="edition">
-            <span>2019</span>
-          </div>
-
-          <div class="edition">
-            <span>2018</span>
-          </div>
-
-          <div class="edition">
-            <span>2017</span>
-          </div>
-
-          <div class="edition">
-            <span>2016</span>
-          </div>
-
-          <div class="edition">
-            <span>2015</span>
-          </div>
-        </div>
-
-        <div class="buttons">
-          <button>Gerar simulado</button>
-          <button class="cancel">Cancelar</button>
-        </div>
-
       </div>
     </div>
   </div>
+
+  <div class="modal" id="relatory-gerator-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="color: var(--black); background-color: var(--gray-100);">
+        <div class="modal-header">
+          <h2 class="modal-title"> Gerador de Relatório </h2>
+          <button type="button" onclick="closeRelatoryGeratorModal()" class="btn btn-primary-outlined"> X </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pb-5">
+            <h4>Selecione a área:</h4>
+
+            <div class="pt-3 row justify-content-between">
+              <div class="col-3 select-area" style="border-color:#B2DF8A;">
+                <img src="./assets//math.svg" alt="" style="width: 100%;">
+              </div>
+              <div class="col-3 select-area" style="border-color: #1F78B4;">
+                <img src="./assets/fundaments.svg" alt="" style="width: 100%;">
+              </div>
+              <div class="col-3 select-area" style="border-color: #A6CEE3;">
+                <img src="./assets/technologies.svg" alt="" style="width: 100%;">
+              </div>
+            </div>
+
+            <h4>Selecione o simulados:</h4>
+
+            <div class="pt-3 row g-3 justify-content-start">
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> Todos </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> Última semana </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> Último mês </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> Último ano </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> Últimos 5 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> Últimos 10 </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary-outlined"> Últimos 50 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop"></div>
+
 </body>
+
+<script>
+
+  function openSimulatedGeratorModal() {
+    // Pegando body, modal, backdrop
+    var body = document.getElementsByTagName("body")[0];
+    var modal = document.getElementById("simulated-gerator-modal");
+    var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+    body.classList.add("modal-open")
+    backdrop.style.display = "block";
+    modal.style.display = "block";
+  }
+
+  function closeSimulatedGeratorModal() {
+    // Pegando body, modal, backdrop
+    var body = document.getElementsByTagName("body")[0];
+    var modal = document.getElementById("simulated-gerator-modal");
+    var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+    body.classList.remove("modal-open")
+    backdrop.style.display = "none";
+    modal.style.display = "none";
+  }
+  
+  function openRelatoryGeratorModal() {
+    // Pegando body, modal, backdrop
+    var body = document.getElementsByTagName("body")[0];
+    var modal = document.getElementById("relatory-gerator-modal");
+    var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+    body.classList.add("modal-open")
+    backdrop.style.display = "block";
+    modal.style.display = "block";
+  }
+
+  function closeRelatoryGeratorModal() {
+    // Pegando body, modal, backdrop
+    var body = document.getElementsByTagName("body")[0];
+    var modal = document.getElementById("relatory-gerator-modal");
+    var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+    body.classList.remove("modal-open")
+    backdrop.style.display = "none";
+    modal.style.display = "none";
+  }
+
+</script>
 
 </html>

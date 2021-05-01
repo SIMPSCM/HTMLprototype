@@ -98,6 +98,12 @@ textarea {
 
 }
 
+a {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 body {
   background-color: var(--gray-100);
 }
@@ -457,7 +463,6 @@ a, b, i, strong, em, small, code {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: var(--primary);
   background-clip: padding-box;
   outline: 0;
 }
@@ -467,7 +472,7 @@ a, b, i, strong, em, small, code {
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem 0rem 4rem;
+  padding: 2rem 2rem 0rem 2rem;
 }
 
 .modal-title {
@@ -478,7 +483,7 @@ a, b, i, strong, em, small, code {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 0rem 4rem 2rem 4rem;
+  padding: 0rem 2rem 2rem 2rem;
 }
 
 .modal-footer {
@@ -492,7 +497,7 @@ a, b, i, strong, em, small, code {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 700px;
     margin: 1.75rem auto;
   }
 
