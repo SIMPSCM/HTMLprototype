@@ -11,12 +11,16 @@
   height: 10rem;
   border-radius: 0.2rem;
   padding: 0;
+  background-repeat: no-repeat;
+  transition: .3s
 }
 
 .card:hover {
   background-color: var(--primary-light-translucent);
   filter: blur(0.8);
   filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .id-card {
