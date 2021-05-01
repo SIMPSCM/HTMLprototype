@@ -448,6 +448,7 @@ a, b, i, strong, em, small, code {
   width: auto;
   margin: 0.5rem;
   pointer-events: none;
+  animation: reveal .6s;
 }
 
 .modal-dialog-centered {

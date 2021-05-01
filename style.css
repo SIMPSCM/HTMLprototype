@@ -1,6 +1,28 @@
 @import url("./assets/css/bootstrap-grid.css");
 @import url("./assets/css/simpscmp.css");
 
+@keyframes revealRotate {
+  from {
+    transform: scale(0) rotate(1turn);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0turn);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .card {
   background-image: url(./assets/exams.svg);
   filter: blur(0.5);
@@ -12,7 +34,8 @@
   border-radius: 0.2rem;
   padding: 0;
   background-repeat: no-repeat;
-  transition: .3s
+  transition: .3s;
+  animation: revealRotate 1s;
 }
 
 .card:hover {
